@@ -12,6 +12,9 @@
 		E79415D71E5D5E19004303A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79415D51E5D5E19004303A6 /* Main.storyboard */; };
 		E79415D91E5D5E19004303A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79415D81E5D5E19004303A6 /* Assets.xcassets */; };
 		E79415DC1E5D5E19004303A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79415DA1E5D5E19004303A6 /* LaunchScreen.storyboard */; };
+		E79415E41E5D63A6004303A6 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79415E31E5D63A6004303A6 /* EditViewController.swift */; };
+		E79415E71E5D7008004303A6 /* lamp-off.png in Resources */ = {isa = PBXBuildFile; fileRef = E79415E51E5D7008004303A6 /* lamp-off.png */; };
+		E79415E81E5D7008004303A6 /* lamp-on.png in Resources */ = {isa = PBXBuildFile; fileRef = E79415E61E5D7008004303A6 /* lamp-on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E79415D81E5D5E19004303A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79415DB1E5D5E19004303A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E79415DD1E5D5E19004303A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E79415E31E5D63A6004303A6 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E79415E51E5D7008004303A6 /* lamp-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-off.png"; sourceTree = "<group>"; };
+		E79415E61E5D7008004303A6 /* lamp-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lamp-on.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 		E79415D01E5D5E19004303A6 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				E79415E51E5D7008004303A6 /* lamp-off.png */,
+				E79415E61E5D7008004303A6 /* lamp-on.png */,
 				E79415D11E5D5E19004303A6 /* AppDelegate.swift */,
 				E79415D31E5D5E19004303A6 /* ViewController.swift */,
 				E79415D51E5D5E19004303A6 /* Main.storyboard */,
+				E79415E31E5D63A6004303A6 /* EditViewController.swift */,
 				E79415D81E5D5E19004303A6 /* Assets.xcassets */,
 				E79415DA1E5D5E19004303A6 /* LaunchScreen.storyboard */,
 				E79415DD1E5D5E19004303A6 /* Info.plist */,
@@ -96,7 +105,6 @@
 				TargetAttributes = {
 					E79415CD1E5D5E19004303A6 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 257L46BQB6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,8 +133,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79415DC1E5D5E19004303A6 /* LaunchScreen.storyboard in Resources */,
+				E79415E71E5D7008004303A6 /* lamp-off.png in Resources */,
 				E79415D91E5D5E19004303A6 /* Assets.xcassets in Resources */,
 				E79415D71E5D5E19004303A6 /* Main.storyboard in Resources */,
+				E79415E81E5D7008004303A6 /* lamp-on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +149,7 @@
 			files = (
 				E79415D41E5D5E19004303A6 /* ViewController.swift in Sources */,
 				E79415D21E5D5E19004303A6 /* AppDelegate.swift in Sources */,
+				E79415E41E5D63A6004303A6 /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 257L46BQB6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navigation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.teemo.Navigation;
@@ -274,7 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 257L46BQB6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Navigation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.teemo.Navigation;
