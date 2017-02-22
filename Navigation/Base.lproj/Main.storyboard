@@ -36,7 +36,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eND-dk-jvc">
-                                <rect key="frame" x="16" y="170" width="167" height="221"/>
+                                <rect key="frame" x="16" y="170" width="128" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-rd-2oJ">
@@ -125,10 +125,21 @@
                                     <action selector="swImageOnOff:" destination="QTE-0E-XSN" eventType="valueChanged" id="2cs-Vv-bjE"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bs-T2-GOH">
+                                <rect key="frame" x="24" y="126" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="확대">
+                                    <color key="titleColor" red="1" green="0.37729723100000001" blue="0.60449853600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnImageSizing:" destination="QTE-0E-XSN" eventType="touchUpInside" id="9tG-NX-W6Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="btnImageSizing" destination="5bs-T2-GOH" id="rU9-Df-GJb"/>
                         <outlet property="lblWay" destination="STo-ad-nEa" id="KUo-ha-Pw7"/>
                         <outlet property="swIsOn" destination="jfF-rQ-l7U" id="hw1-qa-KYO"/>
                         <outlet property="txMessage" destination="NVZ-TX-RoA" id="ObK-uu-1k8"/>

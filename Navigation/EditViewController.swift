@@ -11,6 +11,7 @@ import UIKit
 protocol EditDelegate {
     func didMessageEditDone(_ controller: EditViewController, message: String)
     func didImageOnOffDone(_ controller: EditViewController, isOn: Bool)
+    func didImageZoomDone(_ controller: EditViewController, isZoom: Bool)
 }
 
 class EditViewController: UIViewController {
@@ -18,11 +19,13 @@ class EditViewController: UIViewController {
     var textWayValue: String = ""
     var textMessage: String = ""
     var isOn = false
+    var isZoom = false
     var delegate: EditDelegate?
 
     @IBOutlet weak var txMessage: UITextField!
     @IBOutlet weak var lblWay: UILabel!
     @IBOutlet weak var swIsOn: UISwitch!
+    @IBOutlet weak var btnImageSizing: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,11 @@ class EditViewController: UIViewController {
         lblWay.text = textWayValue
         txMessage.text = textMessage
         swIsOn.isOn = isOn
+        if isZoom {
+            btnImageSizing.setTitle("축소", for: UIControlState())
+        } else {
+            btnImageSizing.setTitle("확대", for: UIControlState())
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +53,7 @@ class EditViewController: UIViewController {
         if delegate != nil {
             delegate?.didMessageEditDone(self, message: txMessage.text!)
             delegate?.didImageOnOffDone(self, isOn: isOn)
+            delegate?.didImageZoomDone(self, isZoom: isZoom)
         }
         
         
@@ -62,6 +71,15 @@ class EditViewController: UIViewController {
         }
     }
 
+    @IBAction func btnImageSizing(_ sender: UIButton) {
+        if isZoom {
+            isZoom = false
+            btnImageSizing.setTitle("확대", for: UIControlState())
+        } else {
+            isZoom = true
+            btnImageSizing.setTitle("축소", for: UIControlState())
+        }
+    }
     /*
     // MARK: - Navigation
 
